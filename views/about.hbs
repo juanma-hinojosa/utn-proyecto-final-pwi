@@ -1,0 +1,61 @@
+<div class="nosotros" id="nosotros">
+    <div class="nosotros-content">
+        <div class="left-side">
+            <div class="left-side-content">
+                <h2>Nosotros</h2>
+                <div class="margen20" style="height: 20px;"></div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Mollitia animi repellendus minus natus maxime iusto hic
+                    dolores tenetur voluptatem iure? Distinctio placeat et
+                    voluptate qui sint esse ad consequuntur quia sunt, minima
+                    illo delectus tempora unde provident nulla? Corrupti, esse!</p>
+                <div class="margen10" style="height: 10px;"></div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Nobis quod sit tempore, saepe voluptatibus autem temporibus
+                    nemo minus iure ullam mollitia tenetur eos placeat expedita
+                    nostrum! Excepturi molestiae cupiditate qui quos voluptatem,
+                    pariatur porro mollitia sequi ducimus repellendus, in unde
+                    modi commodi nihil facere cum.</p>
+            </div>
+        </div>
+        <div class="right-side">
+            <img src="images/nosotros.jpg" alt="">
+        </div>
+    </div>
+</div>
+
+<div class="bx-portfolio" id="trabajos">
+    <div class="portfolio-title">
+        <h3>Ultimos Trabajos</h3>
+    </div>
+
+    <div class="resumen-portfolio">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit
+            praesentium nostrum nobis delectus esse assumenda. Reiciendis
+            praesentium veniam tenetur mollitia maiores quam. Excepturi optio
+            unde minus pariatur?</p>
+    </div>
+
+    <div class="portfolio">
+        <div class="container">
+            {{#each boxWork}}
+            <div class="card">
+                <div class="imgBx">
+                    <img src="images/proyectos/proyecto{{this.imgBx}}.jpg"
+                        alt="">
+                </div>
+
+                <div class="contentBx">
+                    <div class="content">
+                        <h3>{{this.titlePortfolio}}</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit.</p>
+                        <div class="margen-interno"></div>
+                        <a href="#">Ver</a>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>

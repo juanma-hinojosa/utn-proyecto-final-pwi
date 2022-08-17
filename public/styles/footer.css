@@ -1,0 +1,14 @@
+.footer {
+    background-color: black;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.footer .footer-content {
+    letter-spacing: 1px;
+    font-size: .9em;
+}

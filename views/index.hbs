@@ -1,0 +1,35 @@
+<div class="home" id="home">
+    <div class="content-home">
+        <div class="text">
+            <div class="name">
+                <h2>Refacciones y Mantenimiento</h2>
+                <p>Somos una empresa dedica a refacciones y Mantenimiento
+                    Integral</p>
+            </div>
+
+            <div class="skrol-icon">
+                <a href="#servicios"><i class="fas fa-chevron-down"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="servicios" id="servicios">
+    <div class="servicios-title">
+        <h2>Nuestros Servicios</h2>
+    </div>
+
+    <div class="servicios-wrapper">
+        <main class="grid">
+            {{#each results}}
+                <article>
+                    <div class="text">
+                        <h3>{{card_services_name}}</h3>
+                        <p>{{card_services_desc}}.</p>
+                        <div class="margen-interno"></div>
+                        <a href="#">Info</a>
+                    </div>
+                </article>
+            {{/each}}
+        </main>
+    </div>
+</div>

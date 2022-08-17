@@ -1,0 +1,63 @@
+.home {
+    background-image: url(/images/03_guetzli-29.jpg);
+    background-color: rgb(50, 50, 50);
+    background-blend-mode: soft-light;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    /* padding: 50px; */
+    
+}
+
+.home > .content-home {
+    /* padding: 100px; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+
+.home > .content-home .name {
+    /* padding: 25px; */
+    margin-bottom: 50px;
+}
+
+.home > .content-home .name h2{
+    color: whitesmoke;
+    font-size: 3rem;
+    letter-spacing: 2px; 
+}
+
+.home > .content-home .name p {
+    color: whitesmoke;
+    font-size: 1.1rem;
+}
+
+.home > .content-home > .text > .skrol-icon a{
+    font-size: 3rem;
+    color: whitesmoke;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.home > .content-home > .text > .skrol-icon a:hover {
+    color: #163962;
+}
+
+@media (max-width: 375px) {
+    .home {
+        height: 70vh;
+        /* padding: 50px; */
+        
+    }
+    .home > .content-home .name h2{
+        color: whitesmoke;
+        font-size: 2rem;
+        letter-spacing: 2px; 
+    }
+}
