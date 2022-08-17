@@ -80,6 +80,7 @@ app.post("/contact", (req, res) => {
         let validacion = "Campo Obligatorio"
 
         res.render("contact", {
+            title: "Contacto",
             validacion
         })
     } else {
@@ -100,7 +101,7 @@ app.post("/contact", (req, res) => {
                 html: `${message}`
             })
             res.render("enviado", {
-                titulo: "Contacto",
+                title: "Contacto",
                 nombre,
                 email
             })
