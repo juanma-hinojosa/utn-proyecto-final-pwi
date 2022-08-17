@@ -74,9 +74,9 @@ app.get("/contact", (req, res) => {
 })
 
 app.post("/contact", (req, res) => {
-    const {nombre, email, message} = req.body;
+    const {fullName, email, message} = req.body;
 
-    if(nombre == "" || email == "" || message == "") {
+    if(fullName == "" || email == "" || message == "") {
         let validacion = "Campo Obligatorio"
 
         res.render("contact", {
@@ -99,10 +99,10 @@ app.post("/contact", (req, res) => {
                 to: `${email}`,
                 subject: "Presupuesto",
                 html: `${message}`
-            })
+            });
             res.render("enviado", {
                 title: "Contacto",
-                nombre,
+                fullName,
                 email
             })
         }
