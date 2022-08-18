@@ -9,6 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 
+// Conexion a la DB
 // const conexion = mysql.createConnection({
 //     host: process.env.HOST,
 //     user: process.env.USER,
@@ -48,7 +49,7 @@ app.get("/",(req, res, next) => {
     // })
 
     res.render("index", {
-        titulo:"Inicio"
+        title:"Inicio"
     })
     
 })
@@ -76,7 +77,7 @@ app.get("/contact", (req, res) => {
 app.post("/contact", (req, res) => {
     const {fullName, email, message} = req.body;
 
-    if(fullName == "" || email == "" || message == "") {
+    if(fullName == "" || email == ""  || message ==  "") {
         let validacion = "Campo Obligatorio"
 
         res.render("contact", {
@@ -84,22 +85,27 @@ app.post("/contact", (req, res) => {
             validacion
         })
     } else {
+        console.log(fullName);
+        console.log(email);
+        console.log(message);
         async function envioMail() {
             let transportador = nodemailer.createTransport({
                 host: "smtp.gmail.com",
                 port: 465,
                 secure: true,
                 auth: {
-                    user: process.env.USERMAIL,
+                    user: process.env.USEREMAIL,
                     pass: "prgczcbmsnrzihvk"
-                }
+                }  
             });
+
             let envio = await transportador.sendMail({
-                from: process.env.USERMAIL,
+                from: process.env.USEREMAIL,
                 to: `${email}`,
                 subject: "Presupuesto",
                 html: `${message}`
             });
+
             res.render("enviado", {
                 title: "Contacto",
                 fullName,
