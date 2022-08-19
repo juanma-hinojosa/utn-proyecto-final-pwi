@@ -1,7 +1,9 @@
 <div class="nosotros" id="nosotros">
     <div class="nosotros-content">
         <div class="left-side">
-            <div class="left-side-content">
+            <div class="left-side-content" data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine">
                 <h2>Nosotros</h2>
                 <div class="margen20" style="height: 20px;"></div>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -39,7 +41,8 @@
     <div class="portfolio">
         <div class="container">
             {{#each boxWork}}
-            <div class="card">
+            <div class="card" data-aos="fade-up"
+                data-aos-duration="2500">
                 <div class="imgBx">
                     <img src="images/proyectos/proyecto{{this.imgBx}}.jpg"
                         alt="">
